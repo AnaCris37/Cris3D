@@ -1,16 +1,15 @@
-
 body {
 	font-family: verdana, arial, sans-serif;
 	background-color: #FAF8F2;
 	color: #2B2B2B;
-	min-height: 100vh;         
+	min-height: 100vh;
 	display: flex;
-	flex-direction: column;    
-	padding-left: 220px;       
+	flex-direction: column;
+	padding-left: 220px;
 }
 
 main {
-	flex: 1;                 
+	flex: 1;
 }
 
 main a {
@@ -27,11 +26,11 @@ h2 {
 
 header {
 	background-color: black;
-	position: fixed;         
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 220px;
-	height: 100vh;             
+	height: 100vh;
 	overflow-y: auto;
 }
 
@@ -40,7 +39,7 @@ header .container {
 }
 
 .logo-menu {
-	width: 160px;              
+	width: 160px;
 	height: auto;
 }
 
@@ -52,15 +51,15 @@ header .container {
 
 .menu {
 	list-style: none;
-	background-color: #D4AF37;  
+	background-color: #D4AF37;
 	text-align: left;
 	padding: 20px 0;
-	margin-top: 60px;          
+	margin-top: 60px;
 	margin-bottom: 0;
 }
 
 .menu li {
-	display: block;            
+	display: block;
 	margin: 0;
 }
 
@@ -111,10 +110,9 @@ header .container {
 	overflow: hidden;
 }
 
-
 .card-img-top {
 	height: 110px;
-	object-fit: contain;       
+	object-fit: contain;
 	background-color: white;
 	padding: 5px;
 }
@@ -133,7 +131,6 @@ header .container {
 	margin: 0;
 }
 
-
 .material h3 {
 	font-size: 1.3rem;
 	color: #8C6D12;
@@ -143,7 +140,6 @@ header .container {
 	font-size: 1rem;
 	margin-bottom: 8px;
 }
-
 
 .contactos {
 	padding: 10px 15px;
@@ -159,7 +155,6 @@ header .container {
 .contactos address {
 	margin: 0;
 }
-
 
 .obrigado {
 	max-width: 600px;
@@ -181,9 +176,8 @@ header .container {
 }
 
 .botao:hover {
-	background-color: #B8962E; 
+	background-color: #B8962E;
 }
-
 
 footer {
 	background-color: #D4AF37;
@@ -200,4 +194,36 @@ footer p {
 footer a {
 	color: black;
 	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding-left: 110px;
+	}
+
+	header {
+		width: 110px;
+	}
+
+	header .container {
+		padding: 15px 5px !important;
+	}
+
+	.logo-menu {
+		width: 80px;
+	}
+
+	.slogan {
+		font-size: 0.7rem;
+	}
+
+	.menu {
+		margin-top: 20px;
+		padding: 10px 0;
+	}
+
+	.menu a {
+		padding: 8px 10px;
+		font-size: 0.85rem;
+	}
 }
