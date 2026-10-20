@@ -1,0 +1,203 @@
+
+body {
+	font-family: verdana, arial, sans-serif;
+	background-color: #FAF8F2;
+	color: #2B2B2B;
+	min-height: 100vh;         
+	display: flex;
+	flex-direction: column;    
+	padding-left: 220px;       
+}
+
+main {
+	flex: 1;                 
+}
+
+main a {
+	color: #8C6D12;
+}
+
+h1, h2 {
+	color: #8C6D12;
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+header {
+	background-color: black;
+	position: fixed;         
+	top: 0;
+	left: 0;
+	width: 220px;
+	height: 100vh;             
+	overflow-y: auto;
+}
+
+header .container {
+	padding-top: 30px !important;
+}
+
+.logo-menu {
+	width: 160px;              
+	height: auto;
+}
+
+.slogan {
+	color: #D4AF37;
+	margin: 5px 0 0 0;
+	font-size: 0.9rem;
+}
+
+.menu {
+	list-style: none;
+	background-color: #D4AF37;  
+	text-align: left;
+	padding: 20px 0;
+	margin-top: 60px;          
+	margin-bottom: 0;
+}
+
+.menu li {
+	display: block;            
+	margin: 0;
+}
+
+.menu a {
+	display: block;
+	padding: 10px 25px;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.menu a.ativo,
+.menu a:hover {
+	background-color: black;
+	color: #D4AF37;
+}
+
+.apresentacao {
+	max-width: 800px;
+	padding: 15px 20px;
+	margin-bottom: 15px;
+	border-left: 5px solid #D4AF37;
+	background-color: white;
+}
+
+.apresentacao p {
+	margin: 5px 0;
+	font-size: 1.1rem;
+}
+
+.apresentacao .destaque {
+	font-weight: bold;
+	font-size: 1.3rem;
+	color: #8C6D12;
+}
+
+.espaco-slogan {
+	margin-top: 80px;
+}
+
+.espaco-botao {
+	margin-top: 50px;
+}
+
+.video-promo {
+	border: 3px solid #D4AF37;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+
+.card-img-top {
+	height: 110px;
+	object-fit: contain;       
+	background-color: white;
+	padding: 5px;
+}
+
+.card-body {
+	padding: 8px;
+}
+
+.card h3 {
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+.card p {
+	font-size: 0.8rem;
+	margin: 0;
+}
+
+
+.material h3 {
+	font-size: 1.3rem;
+	color: #8C6D12;
+}
+
+.material p {
+	font-size: 1rem;
+	margin-bottom: 8px;
+}
+
+
+.contactos {
+	padding: 10px 15px;
+	border-left: 5px solid #D4AF37;
+	background-color: white;
+	font-size: 0.9rem;
+}
+
+.contactos p {
+	margin: 3px 0;
+}
+
+.contactos address {
+	margin: 0;
+}
+
+
+.obrigado {
+	max-width: 600px;
+	margin: 40px auto;
+	padding: 30px;
+	background-color: white;
+	border-top: 5px solid #D4AF37;
+}
+
+.botao {
+	display: inline-block;
+	padding: 8px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #D4AF37;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.botao:hover {
+	background-color: #B8962E; 
+}
+
+
+footer {
+	background-color: #D4AF37;
+	color: black;
+	text-align: center;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer a {
+	color: black;
+	font-weight: bold;
+}
