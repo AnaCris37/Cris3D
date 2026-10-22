@@ -29,7 +29,7 @@ Na Cris3D transformamos ideias em objetos reais. Cada peça é desenhada e impre
 
 📱 **Suportes de telemóvel**: em forma de coração, dobráveis ou rendilhados
 
-🏠 **Decoração**: molduras, vasos, caixas, candeeiros e árvores de Natal com mensagens especiais
+🏠 **Decoração**: molduras, caixas, candeeiros e árvores de Natal com mensagens especiais
 
 🐱 **Para os amigos de quatro patas**: dispensadores de latas e acessórios com muita personalidade
 
