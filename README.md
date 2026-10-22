@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/logo.png" alt="Logótipo Cris3D" width="200">
+ <img src="img/logo-animado.gif" alt="Logótipo animado Cris3D" width="250">
 </p>
 
 <h1 align="center">Cris3D 🖨️✨</h1>
