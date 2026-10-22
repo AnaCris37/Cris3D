@@ -2,7 +2,7 @@
  <img src="img/logo-animado.gif" alt="Logótipo animado Cris3D" width="250">
 </p>
 
-<h1 align="center">Cris3D 🖨️✨</h1>
+<h1 align="center"><img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/7f8a791a-4e93-4e58-89c4-9af5ccca447f" /> Cris3D ✨</h1>
 
 <p align="center">
   <b>Ideias que ganham forma, camada a camada.</b><br>
