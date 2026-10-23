@@ -1,229 +1,701 @@
+/* =========================================================
+   Cris3D — folha de estilos
+   Ideia: os cantos cortados do logótipo e as linhas das
+   camadas da impressão 3D são a "assinatura" do site.
+   ========================================================= */
+
+:root {
+	--preto: #000000;
+	--carvao: #1B1B1E;      /* superfícies escuras */
+	--ouro: #D4AF37;        /* cor da marca */
+	--ouro-escuro: #8C6D12; /* texto dourado sobre fundo claro */
+	--prata: #C9CCD1;       /* como o "CRIS" do logótipo */
+	--papel: #F6F4EE;       /* fundo das páginas */
+	--tinta: #222222;       /* texto normal */
+	--cinza: #5E5E5E;       /* texto secundário */
+
+	--corte: 14px;          /* tamanho do canto cortado */
+	--fonte-titulos: "Chakra Petch", "Trebuchet MS", sans-serif;
+	--fonte-texto: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+
 body {
-	font-family: verdana, arial, sans-serif;
-	background-color: #FAF8F2;
-	color: #2B2B2B;
+	font-family: var(--fonte-texto);
+	font-size: 1.0625rem;
+	line-height: 1.6;
+	background-color: var(--papel);
+	color: var(--tinta);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	padding-left: 220px;
 }
 
 main {
 	flex: 1;
 }
 
+h1, h2, h3 {
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	line-height: 1.15;
+	color: var(--preto);
+}
+
+h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
+h3 { font-size: 1.1rem; }
+
 main a {
-	color: #8C6D12;
+	color: var(--ouro-escuro);
+	text-underline-offset: 3px;
 }
 
-h1, h2 {
-	color: #8C6D12;
+a:focus-visible,
+button:focus-visible,
+.form-control:focus,
+.form-select:focus {
+	outline: 3px solid var(--ouro);
+	outline-offset: 2px;
+	box-shadow: none;
 }
 
-h2 {
-	margin-top: 30px;
+.texto-curto {
+	max-width: 62ch;
 }
 
-header {
-	background-color: black;
-	position: fixed;
+.secao {
+	padding: 4.5rem 0;
+}
+
+.secao-titulo {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+
+.secao-titulo h2 {
+	margin: 0;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.cabecalho {
+	position: sticky;
 	top: 0;
-	left: 0;
-	width: 220px;
-	height: 100vh;
-	overflow-y: auto;
+	z-index: 1000;
+	background-color: var(--preto);
+	border-bottom: 1px solid #2A2A2A;
 }
 
-header .container {
-	padding-top: 30px !important;
+.cabecalho .navbar {
+	padding: 0.6rem 0;
 }
 
-.logo-menu {
-	width: 160px;
+.marca {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	text-decoration: none;
+}
+
+.marca img {
+	width: 44px;
 	height: auto;
 }
 
-.slogan {
-	color: #D4AF37;
-	margin: 5px 0 0 0;
-	font-size: 0.9rem;
+.marca-nome {
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	font-size: 1.45rem;
+	letter-spacing: 0.04em;
+	color: var(--prata);
 }
 
-.menu {
-	list-style: none;
-	background-color: #D4AF37;
-	text-align: left;
-	padding: 20px 0;
-	margin-top: 60px;
-	margin-bottom: 0;
+.marca-nome span {
+	color: var(--ouro);
 }
 
-.menu li {
-	display: block;
-	margin: 0;
+.cabecalho .nav-link {
+	font-family: var(--fonte-titulos);
+	font-weight: 600;
+	color: var(--prata);
+	padding: 0.5rem 0.9rem !important;
+	position: relative;
 }
 
-.menu a {
-	display: block;
-	padding: 10px 25px;
-	color: black;
-	font-weight: bold;
-	text-decoration: none;
+.cabecalho .nav-link:hover {
+	color: #FFFFFF;
 }
 
-.menu a.ativo,
-.menu a:hover {
-	background-color: black;
-	color: #D4AF37;
+/* a página atual fica sublinhada a dourado */
+.cabecalho .nav-link.ativo {
+	color: var(--ouro);
 }
 
-.apresentacao {
-	max-width: 800px;
-	padding: 15px 20px;
-	margin-bottom: 15px;
-	border-left: 5px solid #D4AF37;
-	background-color: white;
+.cabecalho .nav-link.ativo::after {
+	content: "";
+	position: absolute;
+	left: 0.9rem;
+	right: 0.9rem;
+	bottom: 0.2rem;
+	height: 2px;
+	background-color: var(--ouro);
 }
 
-.apresentacao p {
-	margin: 5px 0;
-	font-size: 1.1rem;
+.navbar-toggler {
+	border-color: var(--ouro);
+	padding: 0.35rem 0.6rem;
 }
 
-.apresentacao .destaque {
-	font-weight: bold;
-	font-size: 1.3rem;
-	color: #8C6D12;
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D4AF37' stroke-linecap='round' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.espaco-slogan {
-	margin-top: 80px;
+@media (max-width: 991.98px) {
+	.cabecalho .navbar-collapse {
+		padding: 0.75rem 0 1rem;
+	}
+
+	.cabecalho .nav-link {
+		padding-left: 0 !important;
+	}
+
+	.cabecalho .nav-link.ativo::after {
+		left: 0;
+		right: auto;
+		width: 2rem;
+	}
+
+	.cabecalho .botao {
+		margin-top: 0.5rem;
+	}
 }
 
-.espaco-botao {
-	margin-top: 50px;
-}
-
-.video-promo {
-	border: 3px solid #D4AF37;
-	border-radius: 8px;
-	overflow: hidden;
-}
-
-.card-img-top {
-	height: 110px;
-	object-fit: contain;
-	background-color: white;
-	padding: 5px;
-}
-
-.card-body {
-	padding: 8px;
-}
-
-.card h3 {
-	font-size: 0.9rem;
-	font-weight: bold;
-}
-
-.card p {
-	font-size: 0.8rem;
-	margin: 0;
-}
-
-.material h3 {
-	font-size: 1.3rem;
-	color: #8C6D12;
-}
-
-.material p {
-	font-size: 1rem;
-	margin-bottom: 8px;
-}
-
-.contactos {
-	padding: 10px 15px;
-	border-left: 5px solid #D4AF37;
-	background-color: white;
-	font-size: 0.9rem;
-}
-
-.contactos p {
-	margin: 3px 0;
-}
-
-.contactos address {
-	margin: 0;
-}
-
-.obrigado {
-	max-width: 600px;
-	margin: 40px auto;
-	padding: 30px;
-	background-color: white;
-	border-top: 5px solid #D4AF37;
-}
+/* ---------- Botões (com o canto cortado do logótipo) ---------- */
 
 .botao {
 	display: inline-block;
-	padding: 8px 20px;
+	padding: 0.7rem 1.5rem;
 	border: none;
-	border-radius: 5px;
-	background-color: #D4AF37;
-	color: black;
-	font-weight: bold;
+	background-color: var(--ouro);
+	color: var(--preto);
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	font-size: 1rem;
 	text-decoration: none;
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+	transition: background-color 0.2s;
 }
 
 .botao:hover {
-	background-color: #B8962E;
+	background-color: #E6C452;
+	color: var(--preto);
 }
 
-footer {
-	background-color: #D4AF37;
-	color: black;
-	text-align: center;
-	padding: 15px;
-	margin-top: 30px;
+.botao-contorno {
+	background-color: transparent;
+	color: var(--ouro);
+	box-shadow: inset 0 0 0 2px var(--ouro);
 }
 
-footer p {
+.botao-contorno:hover {
+	background-color: var(--ouro);
+}
+
+.botao-pequeno {
+	padding: 0.45rem 1.1rem;
+	font-size: 0.95rem;
+}
+
+/* ---------- Faixa de abertura (página inicial) ---------- */
+
+.abertura {
+	position: relative;
+	background-color: var(--preto);
+	color: var(--prata);
+	overflow: hidden;
+}
+
+/* linhas finas como as camadas de uma peça impressa */
+.abertura::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: repeating-linear-gradient(
+		to bottom,
+		rgba(212, 175, 55, 0.09) 0,
+		rgba(212, 175, 55, 0.09) 1px,
+		transparent 1px,
+		transparent 7px
+	);
+	pointer-events: none;
+}
+
+.abertura .container {
+	position: relative;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.abertura h1 {
+	color: #FFFFFF;
+	margin-bottom: 1.25rem;
+	max-width: 14ch;
+}
+
+.abertura p {
+	font-size: 1.2rem;
+	max-width: 40ch;
+	color: var(--prata);
+	margin-bottom: 2rem;
+}
+
+.abertura .botoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.abertura-video {
+	width: 100%;
+	max-width: 420px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	/* o fundo do vídeo funde-se com as linhas da faixa */
+	mix-blend-mode: lighten;
+	-webkit-mask-image: radial-gradient(closest-side, #000 75%, transparent);
+	mask-image: radial-gradient(closest-side, #000 75%, transparent);
+}
+
+@media (max-width: 991.98px) {
+	.abertura .container {
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+	}
+
+	.abertura-video {
+		max-width: 280px;
+	}
+}
+
+/* ---------- Grelha de peças ---------- */
+
+.peca {
+	height: 100%;
+}
+
+.peca-foto {
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: none;
+	background: #FFFFFF;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	clip-path: polygon(0 0, calc(100% - var(--corte)) 0, 100% var(--corte), 100% 100%, var(--corte) 100%, 0 calc(100% - var(--corte)));
+	cursor: zoom-in;
+}
+
+.peca-foto img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.35s ease;
+}
+
+.peca-foto:hover img,
+.peca-foto:focus-visible img {
+	transform: scale(1.05);
+}
+
+.peca h3 {
+	margin: 0.8rem 0 0.25rem;
+	font-size: 1.05rem;
+}
+
+.peca p {
+	margin: 0;
+	font-size: 0.95rem;
+	color: var(--cinza);
+	line-height: 1.45;
+}
+
+/* ---------- Bloco "porquê a Cris3D" ---------- */
+
+.lema {
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+	line-height: 1.25;
+	color: var(--preto);
+	margin-bottom: 1.5rem;
+}
+
+.lista-marcas {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+
+.lista-marcas li {
+	position: relative;
+	padding-left: 1.75rem;
+	margin-bottom: 0.6rem;
+}
+
+/* pequeno losango dourado no lugar do ponto */
+.lista-marcas li::before {
+	content: "";
+	position: absolute;
+	left: 0.2rem;
+	top: 0.55em;
+	width: 0.6rem;
+	height: 0.6rem;
+	background-color: var(--ouro);
+	transform: rotate(45deg);
+}
+
+.nota-ods {
+	font-size: 0.95rem;
+	color: var(--cinza);
+	border-left: 3px solid var(--ouro);
+	padding-left: 1rem;
+}
+
+.video-promo {
+	background-color: var(--preto);
+	clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+}
+
+/* ---------- Faixa final (convite) ---------- */
+
+.convite {
+	background-color: var(--ouro);
+	color: var(--preto);
+	padding: 3rem 0;
+}
+
+.convite h2 {
+	margin: 0 0 0.35rem;
+}
+
+.convite p {
 	margin: 0;
 }
 
-footer a {
-	color: black;
-	font-weight: bold;
+.convite .botao {
+	background-color: var(--preto);
+	color: var(--ouro);
 }
 
-@media (max-width: 768px) {
-	body {
-		padding-left: 110px;
+.convite .botao:hover {
+	background-color: var(--carvao);
+	color: #FFFFFF;
+}
+
+/* ---------- Catálogo: filtros ---------- */
+
+.filtros {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1.5rem 0 2rem;
+}
+
+.filtro {
+	border: 1.5px solid #CFC8B4;
+	background-color: transparent;
+	color: var(--tinta);
+	font-family: var(--fonte-titulos);
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 0.4rem 1rem;
+	border-radius: 999px;
+	transition: background-color 0.2s, border-color 0.2s;
+}
+
+.filtro:hover {
+	border-color: var(--preto);
+}
+
+.filtro[aria-pressed="true"] {
+	background-color: var(--preto);
+	border-color: var(--preto);
+	color: var(--ouro);
+}
+
+.filtro small {
+	font-weight: 400;
+	opacity: 0.7;
+	margin-left: 0.25rem;
+}
+
+@media (max-width: 575.98px) {
+	/* no telemóvel os filtros deslizam para o lado */
+	.filtros {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		margin-left: -0.75rem;
+		margin-right: -0.75rem;
+		padding: 0 0.75rem 0.5rem;
+		scrollbar-width: none;
 	}
 
-	header {
-		width: 110px;
+	.filtro {
+		flex: 0 0 auto;
 	}
+}
 
-	header .container {
-		padding: 15px 5px !important;
-	}
+/* ---------- Catálogo: foto ampliada ---------- */
 
-	.logo-menu {
-		width: 80px;
-	}
+.ampliacao {
+	border: none;
+	padding: 0;
+	max-width: min(720px, 92vw);
+	width: 100%;
+	background-color: #FFFFFF;
+	clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+}
 
-	.slogan {
-		font-size: 0.7rem;
-	}
+.ampliacao::backdrop {
+	background-color: rgba(0, 0, 0, 0.82);
+}
 
-	.menu {
-		margin-top: 20px;
-		padding: 10px 0;
-	}
+.ampliacao img {
+	display: block;
+	width: 100%;
+	max-height: 70vh;
+	object-fit: contain;
+	background-color: #F1F1F1;
+}
 
-	.menu a {
-		padding: 8px 10px;
-		font-size: 0.85rem;
+.ampliacao-texto {
+	padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.ampliacao-texto h2 {
+	font-size: 1.4rem;
+	margin-bottom: 0.4rem;
+}
+
+.ampliacao-texto p {
+	color: var(--cinza);
+	margin-bottom: 1.1rem;
+}
+
+.ampliacao-acoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+.botao-fechar {
+	border: none;
+	background: none;
+	font-family: var(--fonte-titulos);
+	font-weight: 600;
+	color: var(--cinza);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+/* ---------- Páginas interiores ---------- */
+
+.topo-pagina {
+	padding: 3.5rem 0 1rem;
+}
+
+.topo-pagina p {
+	font-size: 1.15rem;
+	color: var(--cinza);
+	max-width: 60ch;
+	margin: 0;
+}
+
+/* Sobre: passos do pedido (é mesmo uma sequência, por isso tem números) */
+.passos {
+	list-style: none;
+	counter-reset: passo;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.passos {
+		grid-template-columns: repeat(4, 1fr);
 	}
+}
+
+.passos li {
+	counter-increment: passo;
+	background-color: #FFFFFF;
+	padding: 1.25rem;
+	border-top: 3px solid var(--ouro);
+}
+
+.passos li::before {
+	content: counter(passo);
+	display: block;
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1;
+	color: var(--ouro-escuro);
+	margin-bottom: 0.5rem;
+}
+
+.material {
+	background-color: var(--preto);
+	color: var(--prata);
+	padding: 1.75rem;
+	height: 100%;
+	clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+.material h3 {
+	color: var(--ouro);
+	font-size: 1.6rem;
+}
+
+.material strong {
+	color: #FFFFFF;
+}
+
+.material p:last-child {
+	margin-bottom: 0;
+}
+
+.foto-sobre {
+	width: 100%;
+	height: auto;
+	clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
+}
+
+/* Contactos */
+.formulario {
+	background-color: #FFFFFF;
+	padding: 2rem;
+	border-top: 3px solid var(--ouro);
+}
+
+.form-control,
+.form-select {
+	border-radius: 0;
+	border-color: #CFC8B4;
+}
+
+.cartao-contactos {
+	background-color: var(--preto);
+	color: var(--prata);
+	padding: 2rem;
+	clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+.cartao-contactos h2 {
+	color: var(--ouro);
+	font-size: 1.5rem;
+}
+
+.cartao-contactos address {
+	margin: 0;
+}
+
+.cartao-contactos dt {
+	font-family: var(--fonte-titulos);
+	font-weight: 600;
+	color: var(--ouro);
+	font-size: 0.95rem;
+}
+
+.cartao-contactos dd {
+	margin-bottom: 1rem;
+}
+
+.cartao-contactos a {
+	color: #FFFFFF;
+}
+
+/* Obrigado */
+.obrigado {
+	max-width: 620px;
+	margin: 4rem auto;
+	padding: 2.5rem 2rem;
+	background-color: #FFFFFF;
+	border-top: 3px solid var(--ouro);
+	text-align: center;
+}
+
+.obrigado .botoes {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+	background-color: var(--preto);
+	color: var(--prata);
+	padding: 3rem 0 1.5rem;
+	font-size: 0.95rem;
+}
+
+.rodape h2 {
+	font-size: 1rem;
+	color: var(--ouro);
+	margin-bottom: 0.75rem;
+}
+
+.rodape ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.rodape li {
+	margin-bottom: 0.35rem;
+}
+
+.rodape a {
+	overflow-wrap: anywhere;
+	color: var(--prata);
+	text-decoration: none;
+}
+
+.rodape a:hover {
+	color: var(--ouro);
+	text-decoration: underline;
+}
+
+.rodape-fim {
+	border-top: 1px solid #2A2A2A;
+	margin-top: 2rem;
+	padding-top: 1.25rem;
+	font-size: 0.85rem;
+	color: #8A8A8A;
+}
+
+/* ---------- Menos movimento para quem o pediu no sistema ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
+/* botão de contorno sobre fundo claro */
+.botao-contorno.botao-claro {
+	color: var(--preto);
 }

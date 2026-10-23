@@ -50,5 +50,5 @@ Tens uma ideia? Conta-nos e nós damos-lhe forma!
 ---
 
 <p align="center">
-  Site criado por <a href="https://github.com/AnaCris37">Ana Marques</a> com HTML e CSS 💜
+  Site criado por <a href="https://github.com/AnaCris37">Ana Marques</a> com HTML, CSS, Bootstrap e JavaScript 💜
 </p>

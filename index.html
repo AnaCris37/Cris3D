@@ -3,104 +3,198 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Início | Cris3D</title>
+	<title>Cris3D | Impressão 3D personalizada na Marinha Grande</title>
+	<meta name="description" content="Peças impressas em 3D à sua medida: relógios, prendas personalizadas, enfeites de Natal, porta-chaves e peças para empresas. Marinha Grande.">
+	<link rel="icon" href="img/emblema.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="container text-center py-3">
-			<img src="img/logo-animado.gif" alt="Logótipo Cris3D a imprimir a pirâmide" class="logo-menu">
-			<p class="slogan">Impressão 3D personalizada</p>
-		</div>
-		<nav>
-			<ul class="menu">
-				<li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
-				<li><a href="catalogo.html">Catálogo</a></li>
-				<li><a href="sobre.html">Sobre</a></li>
-				<li><a href="contactos.html">Contactos</a></li>
-			</ul>
+	<header class="cabecalho">
+		<nav class="navbar navbar-expand-lg" aria-label="Menu principal">
+			<div class="container">
+				<a class="marca" href="index.html">
+					<img src="img/emblema.png" alt="" width="44" height="40">
+					<span class="marca-nome">CRIS<span>3D</span></span>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+					aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="navbar-nav ms-auto align-items-lg-center">
+						<li class="nav-item"><a class="nav-link ativo" aria-current="page" href="index.html">Início</a></li>
+						<li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+						<li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+						<li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+					</ul>
+					<a href="contactos.html" class="botao botao-pequeno ms-lg-3">Pedir informação</a>
+				</div>
+			</div>
 		</nav>
 	</header>
-	<main class="container py-4">
-		<h1 class="mb-5">Peças em 3D feitas à sua medida !</h1>
-		<div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
-			<div class="col">
-				<div class="card h-100">
-					<img src="img/relogio-disco.jpg" class="card-img-top" alt="Relógio de parede em forma de disco de travão">
-					<div class="card-body">
-						<h3>Relógio disco de travão</h3>
-						<p>Com o logótipo e o nome que quiser.</p>
+
+	<main>
+		<section class="abertura">
+			<div class="container">
+				<div class="row align-items-center g-4 g-lg-5">
+					<div class="col-lg-7">
+						<h1>Peças em 3D feitas à sua medida.</h1>
+						<p>Relógios, prendas com nome, enfeites de Natal e peças para o seu negócio, desenhados e impressos na Marinha Grande.</p>
+						<div class="botoes">
+							<a href="contactos.html" class="botao">Pedir informação</a>
+							<a href="catalogo.html" class="botao botao-contorno">Ver catálogo</a>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<video class="abertura-video" autoplay muted loop playsinline poster="img/logo-impressao-poster.jpg"
+							aria-label="Animação do logótipo Cris3D: a impressora imprime uma pirâmide dourada">
+							<source src="img/logo-impressao.mp4" type="video/mp4">
+						</video>
 					</div>
 				</div>
 			</div>
+		</section>
+
+		<section class="secao">
+			<div class="container">
+				<div class="secao-titulo">
+					<h2>Alguns trabalhos</h2>
+					<a href="catalogo.html">Ver as 43 peças do catálogo</a>
+				</div>
+				<div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
 			<div class="col">
-				<div class="card h-100">
-					<img src="img/bolas-natal.jpg" class="card-img-top" alt="Bolas de Natal douradas com nomes">
-					<div class="card-body">
-						<h3>Bolas de Natal</h3>
-						<p>Com o nome de cada pessoa.</p>
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/relogio-molde.jpg" aria-label="Ampliar foto: Relógio molde">
+						<img src="img/relogio-molde.jpg" alt="Relógio de parede quadrado em forma de molde, com o logótipo da empresa" loading="lazy">
+					</button>
+					<h3>Relógio molde</h3>
+					<p>Com o logótipo da sua empresa.</p>
+				</article>
+			</div>
+			<div class="col">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/bolas-natal.jpg" aria-label="Ampliar foto: Bolas de Natal">
+						<img src="img/bolas-natal.jpg" alt="Bolas de Natal douradas com nomes" loading="lazy">
+					</button>
+					<h3>Bolas de Natal</h3>
+					<p>Com o nome de cada pessoa.</p>
+				</article>
+			</div>
+			<div class="col">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-chaves-anilha.jpg" aria-label="Ampliar foto: Porta-chaves guarda-joias">
+						<img src="img/porta-chaves-anilha.jpg" alt="Porta-chaves em forma de anilha de ginásio, que abre e serve de caixinha" loading="lazy">
+					</button>
+					<h3>Porta-chaves guarda-joias</h3>
+					<p>Guarda os pequenos objetos na ida ao ginásio.</p>
+				</article>
+			</div>
+			<div class="col">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/moldura.jpg" aria-label="Ampliar foto: Moldura com NFC">
+						<img src="img/moldura.jpg" alt="Moldura cor-de-rosa com cavalete e coração com símbolo NFC" loading="lazy">
+					</button>
+					<h3>Moldura com NFC</h3>
+					<p>Encoste o telemóvel e aparece uma mensagem.</p>
+				</article>
+			</div>
+			<div class="col">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/cortadores-bolachas.jpg" aria-label="Ampliar foto: Cortadores de rissóis">
+						<img src="img/cortadores-bolachas.jpg" alt="Cortadores de bolachas impressos em 3D, em forma de galinha, porco, peixe e pássaro" loading="lazy">
+					</button>
+					<h3>Cortadores de rissóis</h3>
+					<p>Rissóis e bolachas todos iguais.</p>
+				</article>
+			</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="secao pt-0">
+			<div class="container">
+				<div class="row g-4 g-lg-5 align-items-center">
+					<div class="col-lg-6">
+						<p class="lema">Ideias que ganham forma. Projetos que ganham vida!</p>
+						<ul class="lista-marcas">
+							<li>Impressão 3D personalizada de alta qualidade.</li>
+							<li>Peças exclusivas à medida, para si ou para o seu negócio.</li>
+							<li>O único limite é a sua imaginação. Envie mensagem e crie a sua peça!</li>
+						</ul>
+						<p class="nota-ods">Só imprimimos o que é pedido, por isso não há desperdício
+						(<a href="https://ods.pt/objetivos/12-producao-e-consumo-sustentaveis/" target="_blank" rel="noopener">ODS 12 &ndash; Produção e consumo sustentáveis</a>).</p>
+					</div>
+					<div class="col-lg-6">
+						<div class="ratio ratio-16x9 video-promo">
+							<iframe src="https://www.youtube-nocookie.com/embed/fbozHAjJ8dA"
+								title="Vídeo de apresentação da Cris3D" loading="lazy"
+								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img src="img/porta-chaves-anilha.jpg" class="card-img-top" alt="Porta-chaves em forma de anilha de ginásio">
-					<div class="card-body">
-						<h3>Porta-chaves guarda-joias</h3>
-						<p>Guarda os pequenos objetos na ida ao ginásio.</p>
-					</div>
+		</section>
+
+		<section class="convite">
+			<div class="container d-md-flex justify-content-between align-items-center gap-4">
+				<div class="mb-3 mb-md-0">
+					<h2>Tem uma ideia?</h2>
+					<p>Envie uma foto ou uma descrição e respondemos com a proposta.</p>
 				</div>
+				<a href="contactos.html" class="botao">Pedir informação</a>
 			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img src="img/moldura.jpg" class="card-img-top" alt="Moldura cor-de-rosa com cavalete e coração com NFC">
-					<div class="card-body">
-						<h3>Moldura com NFC</h3>
-						<p>Encoste o telemóvel e aparece uma mensagem.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img src="img/cortadores-bolachas.jpg" class="card-img-top" alt="Desenho 3D de cortadores">
-					<div class="card-body">
-						<h3>Cortadores de rissóis</h3>
-						<p>Rissóis e bolachas todos iguais.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row g-4 align-items-end espaco-slogan">
-			<div class="col-md-8">
-				<div class="apresentacao">
-					<p class="destaque">&#128161; Ideias que ganham forma. Projetos que ganham vida!</p>
-					<p>&#9881;&#65039; Impressão 3D personalizada de alta qualidade.</p>
-					<p>&#10024; Peças exclusivas à medida, para si ou para o seu negócio.</p>
-					<p>&#128230; O único limite é a sua imaginação. Envie já mensagem e crie a sua peça!</p>
-				</div>
-				<p>Só imprimimos o que é pedido, por isso não há desperdício
-				(<a href="https://ods.pt/ods/" target="_blank" title="Objetivos de Desenvolvimento Sustentável">ODS 12 &ndash; Produção e consumo sustentáveis</a>).</p>
-			</div>
-			<div class="col-md-4">
-				<div class="ratio ratio-16x9 video-promo">
-					<iframe src="https://www.youtube.com/embed/fbozHAjJ8dA"
-						title="Vídeo de apresentação da Cris3D"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-		<p class="text-center espaco-botao">
-			<a href="contactos.html" class="botao">Pedir informação</a>
-		</p>
+		</section>
 	</main>
-	<footer>
-		<p>&copy; 2026 Cris3D &ndash; Ana Marques</p>
-		<p>
-			<a href="https://www.instagram.com/cris3d.print/" target="_blank">Instagram</a> |
-			<a href="https://www.facebook.com/CRIS3DPRINT" target="_blank">Facebook</a>
-		</p>
+
+	<dialog class="ampliacao" id="ampliacao" aria-labelledby="ampliacao-titulo">
+		<img src="" alt="" id="ampliacao-foto">
+		<div class="ampliacao-texto">
+			<h2 id="ampliacao-titulo"></h2>
+			<p id="ampliacao-descricao"></p>
+			<div class="ampliacao-acoes">
+				<a href="contactos.html" class="botao" id="ampliacao-pedir">Pedir esta peça</a>
+				<button type="button" class="botao-fechar" id="ampliacao-fechar">Fechar</button>
+			</div>
+		</div>
+	</dialog>
+
+	<footer class="rodape">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-md-5">
+					<a class="marca mb-3" href="index.html">
+						<img src="img/emblema.png" alt="" width="44" height="40">
+						<span class="marca-nome">CRIS<span>3D</span></span>
+					</a>
+					<p class="texto-curto mb-0">Peças impressas em 3D, desenhadas à medida na Marinha Grande.</p>
+				</div>
+				<div class="col-6 col-md-3">
+					<h2>Páginas</h2>
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="catalogo.html">Catálogo</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="contactos.html">Contactos</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<h2>Siga a Cris3D</h2>
+					<ul>
+						<li><a href="https://www.instagram.com/cris3d.print/" target="_blank" rel="noopener">Instagram</a></li>
+						<li><a href="https://www.facebook.com/CRIS3DPRINT" target="_blank" rel="noopener">Facebook</a></li>
+						<li><a href="mailto:cris3d.impressoes@gmail.com">cris3d.impressoes@gmail.com</a></li>
+					</ul>
+				</div>
+			</div>
+			<p class="rodape-fim mb-0">&copy; 2026 Cris3D &ndash; Ana Marques</p>
+		</div>
 	</footer>
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/pecas.js"></script>
 </body>
 </html>

@@ -4,425 +4,494 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Catálogo | Cris3D</title>
+	<meta name="description" content="Catálogo de peças impressas em 3D pela Cris3D: relógios, Natal, porta-chaves, bijuteria, candeeiros, suportes de telemóvel e prendas personalizadas.">
+	<link rel="icon" href="img/emblema.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="container text-center py-3">
-			<img src="img/logo-animado.gif" alt="Logótipo Cris3D a imprimir a pirâmide" class="logo-menu">
-			<p class="slogan">Impressão 3D personalizada</p>
-		</div>
-		<nav>
-			<ul class="menu">
-				<li><a href="index.html">Início</a></li>
-				<li><a href="catalogo.html" class="ativo" aria-current="page">Catálogo</a></li>
-				<li><a href="sobre.html">Sobre</a></li>
-				<li><a href="contactos.html">Contactos</a></li>
-			</ul>
+	<header class="cabecalho">
+		<nav class="navbar navbar-expand-lg" aria-label="Menu principal">
+			<div class="container">
+				<a class="marca" href="index.html">
+					<img src="img/emblema.png" alt="" width="44" height="40">
+					<span class="marca-nome">CRIS<span>3D</span></span>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+					aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="navbar-nav ms-auto align-items-lg-center">
+						<li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+						<li class="nav-item"><a class="nav-link ativo" aria-current="page" href="catalogo.html">Catálogo</a></li>
+						<li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+						<li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+					</ul>
+					<a href="contactos.html" class="botao botao-pequeno ms-lg-3">Pedir informação</a>
+				</div>
+			</div>
 		</nav>
 	</header>
-	<main class="container py-4">
-		<h1>Catálogo</h1>
-		<p>Todas as peças podem ser feitas noutra cor, tamanho ou com outro nome.</p>
 
-		<div class="row g-3">
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/relogio-disco.jpg" class="card-img-top" alt="Relógio em forma de disco de travão de mota">
-					<div class="card-body">
-						<h3>Relógio disco de travão</h3>
-						<p>Para motards, com logótipo.</p>
-					</div>
-				</div>
+	<main class="container pb-5">
+		<div class="topo-pagina">
+			<h1>Catálogo</h1>
+			<p>Todas as peças podem ser feitas noutra cor, tamanho ou com outro nome. Toque numa foto para a ver maior.</p>
+		</div>
+
+		<div class="filtros" role="group" aria-label="Filtrar por categoria">
+			<button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todas<small>43</small></button>
+			<button type="button" class="filtro" data-filtro="relogios" aria-pressed="false">Relógios<small>5</small></button>
+			<button type="button" class="filtro" data-filtro="natal" aria-pressed="false">Natal<small>5</small></button>
+			<button type="button" class="filtro" data-filtro="porta-chaves" aria-pressed="false">Porta-chaves<small>5</small></button>
+			<button type="button" class="filtro" data-filtro="bijuteria" aria-pressed="false">Bijuteria<small>4</small></button>
+			<button type="button" class="filtro" data-filtro="casa" aria-pressed="false">Casa e luz<small>9</small></button>
+			<button type="button" class="filtro" data-filtro="suportes" aria-pressed="false">Suportes de telemóvel<small>4</small></button>
+			<button type="button" class="filtro" data-filtro="escritorio" aria-pressed="false">Escola e leitura<small>5</small></button>
+			<button type="button" class="filtro" data-filtro="prendas" aria-pressed="false">Prendas e festas<small>6</small></button>
+		</div>
+
+		<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="grelha">
+			<div class="col" data-categoria="relogios">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/relogio-disco.jpg" aria-label="Ampliar foto: Relógio disco de travão">
+						<img src="img/relogio-disco.jpg" alt="Relógio em forma de disco de travão de mota" loading="lazy">
+					</button>
+					<h3>Relógio disco de travão</h3>
+					<p>Para motards, com logótipo.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/relogio-harley.jpg" class="card-img-top" alt="Relógio de parede em forma de disco de travão com o logótipo de uma marca de motas">
-					<div class="card-body">
-						<h3>Relógio disco de travão II</h3>
-						<p>Outra versão, com as cores e o logótipo que quiser.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="relogios">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/relogio-harley.jpg" aria-label="Ampliar foto: Relógio disco de travão II">
+						<img src="img/relogio-harley.jpg" alt="Relógio de parede em forma de disco de travão com o logótipo de uma marca de motas" loading="lazy">
+					</button>
+					<h3>Relógio disco de travão II</h3>
+					<p>Outra versão, com as cores e o logótipo que quiser.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/relogio-molde.jpg" class="card-img-top" alt="Relógio quadrado em forma de molde">
-					<div class="card-body">
-						<h3>Relógio molde</h3>
-						<p>Ideal para empresas.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="relogios">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/relogio-molde.jpg" aria-label="Ampliar foto: Relógio molde">
+						<img src="img/relogio-molde.jpg" alt="Relógio quadrado em forma de molde" loading="lazy">
+					</button>
+					<h3>Relógio molde</h3>
+					<p>Ideal para empresas.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/relogio-pistao.jpg" class="card-img-top" alt="Relógio de mesa dourado em forma de pistão e biela de motor">
-					<div class="card-body">
-						<h3>Relógio pistão</h3>
-						<p>Relógio de mesa em forma de pistão de motor.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="relogios">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/relogio-pistao.jpg" aria-label="Ampliar foto: Relógio pistão">
+						<img src="img/relogio-pistao.jpg" alt="Relógio de mesa dourado em forma de pistão e biela de motor" loading="lazy">
+					</button>
+					<h3>Relógio pistão</h3>
+					<p>Relógio de mesa em forma de pistão de motor.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/calendario-perpetuo.jpg" class="card-img-top" alt="Calendário perpétuo branco e amarelo com gota vermelha e a frase Dar Sangue é Dar Vida">
-					<div class="card-body">
-						<h3>Calendário perpétuo</h3>
-						<p>Serve para todos os anos. Personalizado com o seu logótipo ou frase.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="relogios">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/calendario-perpetuo.jpg" aria-label="Ampliar foto: Calendário perpétuo">
+						<img src="img/calendario-perpetuo.jpg" alt="Calendário perpétuo branco e amarelo com gota vermelha e a frase Dar Sangue é Dar Vida" loading="lazy">
+					</button>
+					<h3>Calendário perpétuo</h3>
+					<p>Serve para todos os anos. Personalizado com o seu logótipo ou frase.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/arvore-natal.jpg" class="card-img-top" alt="Árvore de Natal branca com palavras douradas">
-					<div class="card-body">
-						<h3>Árvore de Natal</h3>
-						<p>Com palavras em dourado.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="natal">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/arvore-natal.jpg" aria-label="Ampliar foto: Árvore de Natal">
+						<img src="img/arvore-natal.jpg" alt="Árvore de Natal branca com palavras douradas" loading="lazy">
+					</button>
+					<h3>Árvore de Natal</h3>
+					<p>Com palavras em dourado.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/bolas-natal.jpg" class="card-img-top" alt="Bolas de Natal douradas com nomes">
-					<div class="card-body">
-						<h3>Bolas de Natal</h3>
-						<p>Personalizadas com o nome de cada pessoa.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="natal">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/bolas-natal.jpg" aria-label="Ampliar foto: Bolas de Natal">
+						<img src="img/bolas-natal.jpg" alt="Bolas de Natal douradas com nomes" loading="lazy">
+					</button>
+					<h3>Bolas de Natal</h3>
+					<p>Personalizadas com o nome de cada pessoa.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/bola-natal-pata.jpg" class="card-img-top" alt="Bola de Natal branca com o nome Amélia e uma pata">
-					<div class="card-body">
-						<h3>Bola de Natal com pata</h3>
-						<p>Personalizada com o nome do seu animal de estimação.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="natal">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/bola-natal-pata.jpg" aria-label="Ampliar foto: Bola de Natal com pata">
+						<img src="img/bola-natal-pata.jpg" alt="Bola de Natal branca com o nome Amélia e uma pata" loading="lazy">
+					</button>
+					<h3>Bola de Natal com pata</h3>
+					<p>Personalizada com o nome do seu animal de estimação.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/anjos-natal.jpg" class="card-img-top" alt="Anjos de Natal brancos rendilhados">
-					<div class="card-body">
-						<h3>Anjos de Natal</h3>
-						<p>Enfeites para pendurar na árvore de Natal.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="natal">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/anjos-natal.jpg" aria-label="Ampliar foto: Anjos de Natal">
+						<img src="img/anjos-natal.jpg" alt="Anjos de Natal brancos rendilhados" loading="lazy">
+					</button>
+					<h3>Anjos de Natal</h3>
+					<p>Enfeites para pendurar na árvore de Natal.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/estrela-presepio.jpg" class="card-img-top" alt="Estrela com presépio recortado, iluminada por dentro">
-					<div class="card-body">
-						<h3>Estrela presépio</h3>
-						<p>Estrela com o presépio, que se ilumina com uma vela LED.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="natal">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/estrela-presepio.jpg" aria-label="Ampliar foto: Estrela presépio">
+						<img src="img/estrela-presepio.jpg" alt="Estrela com presépio recortado, iluminada por dentro" loading="lazy">
+					</button>
+					<h3>Estrela presépio</h3>
+					<p>Estrela com o presépio, que se ilumina com uma vela LED.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-chaves-anilha.jpg" class="card-img-top" alt="Porta-chaves em forma de anilha de ginásio, que abre e serve de caixinha">
-					<div class="card-body">
-						<h3>Porta-chaves guarda-joias</h3>
-						<p>Abre e guarda os brincos, anéis e pequenos objetos na ida ao ginásio.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="porta-chaves">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-chaves-anilha.jpg" aria-label="Ampliar foto: Porta-chaves guarda-joias">
+						<img src="img/porta-chaves-anilha.jpg" alt="Porta-chaves em forma de anilha de ginásio, que abre e serve de caixinha" loading="lazy">
+					</button>
+					<h3>Porta-chaves guarda-joias</h3>
+					<p>Abre e guarda os brincos, anéis e pequenos objetos na ida ao ginásio.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-lapis-nome.jpg" class="card-img-top" alt="Porta-lápis em forma de camisola com nome">
-					<div class="card-body">
-						<h3>Porta-lápis camisola</h3>
-						<p>Com o nome no bolso.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="escritorio">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-lapis-nome.jpg" aria-label="Ampliar foto: Porta-lápis camisola">
+						<img src="img/porta-lapis-nome.jpg" alt="Porta-lápis em forma de camisola com nome" loading="lazy">
+					</button>
+					<h3>Porta-lápis camisola</h3>
+					<p>Com o nome no bolso.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/unicornio.jpg" class="card-img-top" alt="Porta-lápis cor-de-rosa em forma de unicórnio, com lápis de cor">
-					<div class="card-body">
-						<h3>Porta-lápis unicórnio</h3>
-						<p>Para lápis, canetas ou pincéis.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="escritorio">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/unicornio.jpg" aria-label="Ampliar foto: Porta-lápis unicórnio">
+						<img src="img/unicornio.jpg" alt="Porta-lápis cor-de-rosa em forma de unicórnio, com lápis de cor" loading="lazy">
+					</button>
+					<h3>Porta-lápis unicórnio</h3>
+					<p>Para lápis, canetas ou pincéis.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-lapis-duplo.jpg" class="card-img-top" alt="Porta-lápis verde com dois compartimentos">
-					<div class="card-body">
-						<h3>Porta-lápis duplo</h3>
-						<p>Com dois compartimentos que encaixam.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="escritorio">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-lapis-duplo.jpg" aria-label="Ampliar foto: Porta-lápis duplo">
+						<img src="img/porta-lapis-duplo.jpg" alt="Porta-lápis verde com dois compartimentos" loading="lazy">
+					</button>
+					<h3>Porta-lápis duplo</h3>
+					<p>Com dois compartimentos que encaixam.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/marcadores-pagina.jpg" class="card-img-top" alt="Três marcadores de página: gato preto, borboleta e gato dourado">
-					<div class="card-body">
-						<h3>Marcadores de página</h3>
-						<p>Marca a página do livro como mais gostas.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="escritorio">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/marcadores-pagina.jpg" aria-label="Ampliar foto: Marcadores de página">
+						<img src="img/marcadores-pagina.jpg" alt="Três marcadores de página: gato preto, borboleta e gato dourado" loading="lazy">
+					</button>
+					<h3>Marcadores de página</h3>
+					<p>Marca a página do livro como mais gostas.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/moldura.jpg" class="card-img-top" alt="Moldura cor-de-rosa com cavalete e coração com símbolo NFC">
-					<div class="card-body">
-						<h3>Moldura com NFC</h3>
-						<p>Encoste o telemóvel ao coração e aparece uma mensagem especial.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="prendas">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/moldura.jpg" aria-label="Ampliar foto: Moldura com NFC">
+						<img src="img/moldura.jpg" alt="Moldura cor-de-rosa com cavalete e coração com símbolo NFC" loading="lazy">
+					</button>
+					<h3>Moldura com NFC</h3>
+					<p>Encoste o telemóvel ao coração e aparece uma mensagem especial.</p>
+				</article>
 			</div>
-				<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-oculos.jpg" class="card-img-top" alt="Suporte de óculos branco em forma de perfil de rosto">
-					<div class="card-body">
-						<h3>Suporte de óculos</h3>
-						<p>Em forma de rosto, para pousar os óculos.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-oculos.jpg" aria-label="Ampliar foto: Suporte de óculos">
+						<img src="img/suporte-oculos.jpg" alt="Suporte de óculos branco em forma de perfil de rosto" loading="lazy">
+					</button>
+					<h3>Suporte de óculos</h3>
+					<p>Em forma de rosto, para pousar os óculos.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-chaves-qr.jpg" class="card-img-top" alt="Porta-chaves preto com código QR, com chaves">
-					<div class="card-body">
-						<h3>Porta-chaves QR</h3>
-						<p>Com um código QR que abre o link que quiser.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="porta-chaves">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-chaves-qr.jpg" aria-label="Ampliar foto: Porta-chaves QR">
+						<img src="img/porta-chaves-qr.jpg" alt="Porta-chaves preto com código QR, com chaves" loading="lazy">
+					</button>
+					<h3>Porta-chaves QR</h3>
+					<p>Com um código QR que abre o link que quiser.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-chaves-parafuso.jpg" class="card-img-top" alt="Porta-chaves em forma de parafuso que abre e guarda um rebuçado">
-					<div class="card-body">
-						<h3>Porta-chaves parafuso</h3>
-						<p>Abre e guarda um rebuçado ou uma surpresa.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="porta-chaves">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-chaves-parafuso.jpg" aria-label="Ampliar foto: Porta-chaves parafuso">
+						<img src="img/porta-chaves-parafuso.jpg" alt="Porta-chaves em forma de parafuso que abre e guarda um rebuçado" loading="lazy">
+					</button>
+					<h3>Porta-chaves parafuso</h3>
+					<p>Abre e guarda um rebuçado ou uma surpresa.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-chaves-suporte-telemovel.jpg" class="card-img-top" alt="Porta-chaves preto e branco que abre e serve de suporte de telemóvel">
-					<div class="card-body">
-						<h3>Porta-chaves suporte de telemóvel</h3>
-						<p>Leva-se nas chaves e abre para segurar o telemóvel.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="porta-chaves">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-chaves-suporte-telemovel.jpg" aria-label="Ampliar foto: Porta-chaves suporte de telemóvel">
+						<img src="img/porta-chaves-suporte-telemovel.jpg" alt="Porta-chaves preto e branco que abre e serve de suporte de telemóvel" loading="lazy">
+					</button>
+					<h3>Porta-chaves suporte de telemóvel</h3>
+					<p>Leva-se nas chaves e abre para segurar o telemóvel.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/mealheiro-lata.jpg" class="card-img-top" alt="Tampa de mealheiro com o símbolo do dólar, colocada numa lata">
-					<div class="card-body">
-						<h3>Mealheiro de lata</h3>
-						<p>Tampa personalizada que transforma uma lata num mealheiro.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="prendas">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/mealheiro-lata.jpg" aria-label="Ampliar foto: Mealheiro de lata">
+						<img src="img/mealheiro-lata.jpg" alt="Tampa de mealheiro com o símbolo do dólar, colocada numa lata" loading="lazy">
+					</button>
+					<h3>Mealheiro de lata</h3>
+					<p>Tampa personalizada que transforma uma lata num mealheiro.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/rosas-palavras.jpg" class="card-img-top" alt="Rosa dourada com a palavra Mãe no caule">
-					<div class="card-body">
-						<h3>Rosas com palavras</h3>
-						<p>Rosa dourada com a palavra ou o nome que quiser.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="prendas">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/rosas-palavras.jpg" aria-label="Ampliar foto: Rosas com palavras">
+						<img src="img/rosas-palavras.jpg" alt="Rosa dourada com a palavra Mãe no caule" loading="lazy">
+					</button>
+					<h3>Rosas com palavras</h3>
+					<p>Rosa dourada com a palavra ou o nome que quiser.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/brincos-interrogacao.jpg" class="card-img-top" alt="Brincos quadrados com ponto de interrogação, em vermelho, amarelo e verde">
-					<div class="card-body">
-						<h3>Brincos temáticos</h3>
-						<p>Em várias cores, leves e divertidos.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="bijuteria">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/brincos-interrogacao.jpg" aria-label="Ampliar foto: Brincos temáticos">
+						<img src="img/brincos-interrogacao.jpg" alt="Brincos quadrados com ponto de interrogação, em vermelho, amarelo e verde" loading="lazy">
+					</button>
+					<h3>Brincos temáticos</h3>
+					<p>Em várias cores, leves e divertidos.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/brincos-lotus.jpg" class="card-img-top" alt="Brincos azuis em forma de flor de lótus">
-					<div class="card-body">
-						<h3>Brincos flor de lótus</h3>
-						<p>Leves e rendilhados, em várias cores.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="bijuteria">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/brincos-lotus.jpg" aria-label="Ampliar foto: Brincos flor de lótus">
+						<img src="img/brincos-lotus.jpg" alt="Brincos azuis em forma de flor de lótus" loading="lazy">
+					</button>
+					<h3>Brincos flor de lótus</h3>
+					<p>Leves e rendilhados, em várias cores.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/brincos-colar-geometricos.jpeg" class="card-img-top" alt="Brincos brancos e colar preto com formas geométricas">
-					<div class="card-body">
-						<h3>Brincos e colar geométricos</h3>
-						<p>Acessórios leves, em várias cores.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="bijuteria">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/brincos-colar-geometricos.jpeg" aria-label="Ampliar foto: Brincos e colar geométricos">
+						<img src="img/brincos-colar-geometricos.jpeg" alt="Brincos brancos e colar preto com formas geométricas" loading="lazy">
+					</button>
+					<h3>Brincos e colar geométricos</h3>
+					<p>Acessórios leves, em várias cores.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/conjunto-caveira.jpg" class="card-img-top" alt="Porta-chaves, colar e brincos pretos em forma de caveira mexicana">
-					<div class="card-body">
-						<h3>Conjunto caveira</h3>
-						<p>Porta-chaves, colar e brincos a condizer.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="bijuteria">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/conjunto-caveira.jpg" aria-label="Ampliar foto: Conjunto caveira">
+						<img src="img/conjunto-caveira.jpg" alt="Porta-chaves, colar e brincos pretos em forma de caveira mexicana" loading="lazy">
+					</button>
+					<h3>Conjunto caveira</h3>
+					<p>Porta-chaves, colar e brincos a condizer.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/topo-bolo.jpg" class="card-img-top" alt="Bolo com topo preto com a frase 100% nurse">
-					<div class="card-body">
-						<h3>Topo de bolo</h3>
-						<p>Com a frase ou o nome que quiser.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="prendas">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/topo-bolo.jpg" aria-label="Ampliar foto: Topo de bolo">
+						<img src="img/topo-bolo.jpg" alt="Bolo com topo preto com a frase 100% nurse" loading="lazy">
+					</button>
+					<h3>Topo de bolo</h3>
+					<p>Com a frase ou o nome que quiser.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/candeeiro-dinossauro.jpg" class="card-img-top" alt="Candeeiro com caveira de dinossauro">
-					<div class="card-body">
-						<h3>Candeeiro dinossauro</h3>
-						<p>Ilumina-se à noite.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/candeeiro-dinossauro.jpg" aria-label="Ampliar foto: Candeeiro dinossauro">
+						<img src="img/candeeiro-dinossauro.jpg" alt="Candeeiro com caveira de dinossauro" loading="lazy">
+					</button>
+					<h3>Candeeiro dinossauro</h3>
+					<p>Ilumina-se à noite.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/candeeiro-ondas.jpg" class="card-img-top" alt="Candeeiro branco em forma de ondas, aceso, com base lilás">
-					<div class="card-body">
-						<h3>Candeeiro ondas</h3>
-						<p>Luz suave, ideal para a mesa de cabeceira.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/candeeiro-ondas.jpg" aria-label="Ampliar foto: Candeeiro ondas">
+						<img src="img/candeeiro-ondas.jpg" alt="Candeeiro branco em forma de ondas, aceso, com base lilás" loading="lazy">
+					</button>
+					<h3>Candeeiro ondas</h3>
+					<p>Luz suave, ideal para a mesa de cabeceira.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/candeeiro-foto.jpg" class="card-img-top" alt="Candeeiro aceso com a foto de um casal gravada">
-					<div class="card-body">
-						<h3>Lithopane colorida</h3>
-						<p>Moldura com luz e foto colorida ou a preto e branco.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/candeeiro-foto.jpg" aria-label="Ampliar foto: Lithopane colorida">
+						<img src="img/candeeiro-foto.jpg" alt="Candeeiro aceso com a foto de um casal gravada" loading="lazy">
+					</button>
+					<h3>Lithopane colorida</h3>
+					<p>Moldura com luz e foto colorida ou a preto e branco.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/moldura-luz-foto.jpg" class="card-img-top" alt="Moldura iluminada com a foto de uma motard ao lado da mota">
-					<div class="card-body">
-						<h3>Candeeiro Lithopane</h3>
-						<p>A sua foto ganha vida quando a luz se acende.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/moldura-luz-foto.jpg" aria-label="Ampliar foto: Candeeiro Lithopane">
+						<img src="img/moldura-luz-foto.jpg" alt="Moldura iluminada com a foto de uma motard ao lado da mota" loading="lazy">
+					</button>
+					<h3>Candeeiro Lithopane</h3>
+					<p>A sua foto ganha vida quando a luz se acende.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/caixa-coracoes.jpg" class="card-img-top" alt="Caixa dourada com corações">
-					<div class="card-body">
-						<h3>Caixa de corações</h3>
-						<p>Com tampa.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/caixa-coracoes.jpg" aria-label="Ampliar foto: Caixa de corações">
+						<img src="img/caixa-coracoes.jpg" alt="Caixa dourada com corações" loading="lazy">
+					</button>
+					<h3>Caixa de corações</h3>
+					<p>Com tampa.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/caixa-lotus.jpg" class="card-img-top" alt="Caixa em forma de flor de lótus">
-					<div class="card-body">
-						<h3>Caixa flor de lótus</h3>
-						<p>Para joias.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/caixa-lotus.jpg" aria-label="Ampliar foto: Caixa flor de lótus">
+						<img src="img/caixa-lotus.jpg" alt="Caixa em forma de flor de lótus" loading="lazy">
+					</button>
+					<h3>Caixa flor de lótus</h3>
+					<p>Para joias.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/cortadores-bolachas.jpg" class="card-img-top" alt="Desenho 3D de cortadores de bolachas em forma de galinha, porco, peixe e pássaro">
-					<div class="card-body">
-						<h3>Cortadores de bolachas</h3>
-						<p>Em várias formas, ou com o desenho que quiser.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="prendas">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/cortadores-bolachas.jpg" aria-label="Ampliar foto: Cortadores de bolachas">
+						<img src="img/cortadores-bolachas.jpg" alt="Cortadores de bolachas impressos em 3D, em forma de galinha, porco, peixe e pássaro" loading="lazy">
+					</button>
+					<h3>Cortadores de bolachas</h3>
+					<p>Em várias formas, ou com o desenho que quiser.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/dispensador-latas.jpg" class="card-img-top" alt="Dispensador amarelo de latas de comida de gato">
-					<div class="card-body">
-						<h3>Dispensador de latas</h3>
-						<p>Arruma as latas do gato.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/dispensador-latas.jpg" aria-label="Ampliar foto: Dispensador de latas">
+						<img src="img/dispensador-latas.jpg" alt="Dispensador amarelo de latas de comida de gato" loading="lazy">
+					</button>
+					<h3>Dispensador de latas</h3>
+					<p>Arruma as latas do gato.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-livro.jpg" class="card-img-top" alt="Suporte cor-de-rosa para livro aberto, com base de cortiça para caneca">
-					<div class="card-body">
-						<h3>Suporte para livro</h3>
-						<p>Com lugar para a caneca.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="escritorio">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-livro.jpg" aria-label="Ampliar foto: Suporte para livro">
+						<img src="img/suporte-livro.jpg" alt="Suporte cor-de-rosa para livro aberto, com base de cortiça para caneca" loading="lazy">
+					</button>
+					<h3>Suporte para livro</h3>
+					<p>Com lugar para a caneca.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-telemovel-folhas.jpg" class="card-img-top" alt="Suporte de telemóvel com folhas">
-					<div class="card-body">
-						<h3>Suporte de telemóvel</h3>
-						<p>Rendilhado com folhas.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="suportes">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-telemovel-folhas.jpg" aria-label="Ampliar foto: Suporte de telemóvel">
+						<img src="img/suporte-telemovel-folhas.jpg" alt="Suporte de telemóvel com folhas" loading="lazy">
+					</button>
+					<h3>Suporte de telemóvel</h3>
+					<p>Rendilhado com folhas.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-telemovel-mesa.jpg" class="card-img-top" alt="Suporte de telemóvel preto preso à borda de uma mesa">
-					<div class="card-body">
-						<h3>Suporte de telemóvel de mesa</h3>
-						<p>Prende-se à borda da mesa.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="suportes">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-telemovel-mesa.jpg" aria-label="Ampliar foto: Suporte de telemóvel de mesa">
+						<img src="img/suporte-telemovel-mesa.jpg" alt="Suporte de telemóvel preto preso à borda de uma mesa" loading="lazy">
+					</button>
+					<h3>Suporte de telemóvel de mesa</h3>
+					<p>Prende-se à borda da mesa.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-telemovel-coracao.jpg" class="card-img-top" alt="Suporte de telemóvel branco em forma de coração">
-					<div class="card-body">
-						<h3>Suporte de telemóvel coração</h3>
-						<p>Em forma de coração, em várias cores.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="suportes">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-telemovel-coracao.jpg" aria-label="Ampliar foto: Suporte de telemóvel coração">
+						<img src="img/suporte-telemovel-coracao.jpg" alt="Suporte de telemóvel branco em forma de coração" loading="lazy">
+					</button>
+					<h3>Suporte de telemóvel coração</h3>
+					<p>Em forma de coração, em várias cores.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-telemovel-donut.jpg" class="card-img-top" alt="Suporte de telemóvel preto redondo em forma de donut">
-					<div class="card-body">
-						<h3>Suporte de telemóvel donut</h3>
-						<p>Redondo e estável, para a secretária.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="suportes">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-telemovel-donut.jpg" aria-label="Ampliar foto: Suporte de telemóvel donut">
+						<img src="img/suporte-telemovel-donut.jpg" alt="Suporte de telemóvel preto redondo em forma de donut" loading="lazy">
+					</button>
+					<h3>Suporte de telemóvel donut</h3>
+					<p>Redondo e estável, para a secretária.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/suporte-garrafa-pistao.jpg" class="card-img-top" alt="Suporte de garrafa de vinho preto em forma de pistão">
-					<div class="card-body">
-						<h3>Suporte de garrafa pistão</h3>
-						<p>Para quem gosta de motores e de bom vinho.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="casa">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/suporte-garrafa-pistao.jpg" aria-label="Ampliar foto: Suporte de garrafa pistão">
+						<img src="img/suporte-garrafa-pistao.jpg" alt="Suporte de garrafa de vinho preto em forma de pistão" loading="lazy">
+					</button>
+					<h3>Suporte de garrafa pistão</h3>
+					<p>Para quem gosta de motores e de bom vinho.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/porta-chaves-parede-mota.jpg" class="card-img-top" alt="Porta-chaves de parede em forma de capacete e de conta-quilómetros">
-					<div class="card-body">
-						<h3>Porta-chaves de parede</h3>
-						<p>Para as chaves da mota: capacete ou conta-quilómetros.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="porta-chaves">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/porta-chaves-parede-mota.jpg" aria-label="Ampliar foto: Porta-chaves de parede">
+						<img src="img/porta-chaves-parede-mota.jpg" alt="Porta-chaves de parede em forma de capacete e de conta-quilómetros" loading="lazy">
+					</button>
+					<h3>Porta-chaves de parede</h3>
+					<p>Para as chaves da mota: capacete ou conta-quilómetros.</p>
+				</article>
 			</div>
-			<div class="col-6 col-md-3 col-lg-2">
-				<div class="card h-100">
-					<img src="img/jogo-equilibrio.jpg" class="card-img-top" alt="Jogo de equilíbrio com peças coloridas encaixadas numa base curva">
-					<div class="card-body">
-						<h3>Jogos didáticos</h3>
-						<p>Jogo de equilíbrio com peças para encaixar, para miúdos e graúdos.</p>
-					</div>
-				</div>
+			<div class="col" data-categoria="prendas">
+				<article class="peca">
+					<button type="button" class="peca-foto" data-foto="img/jogo-equilibrio.jpg" aria-label="Ampliar foto: Jogos didáticos">
+						<img src="img/jogo-equilibrio.jpg" alt="Jogo de equilíbrio com peças coloridas encaixadas numa base curva" loading="lazy">
+					</button>
+					<h3>Jogos didáticos</h3>
+					<p>Jogo de equilíbrio com peças para encaixar, para miúdos e graúdos.</p>
+				</article>
 			</div>
 		</div>
 	</main>
-	<footer>
-		<p>&copy; 2026 Cris3D &ndash; Ana Marques</p>
-		<p>
-			<a href="https://www.instagram.com/cris3d.print/" target="_blank">Instagram</a> |
-			<a href="https://www.facebook.com/CRIS3DPRINT" target="_blank">Facebook</a>
-		</p>
+
+	<dialog class="ampliacao" id="ampliacao" aria-labelledby="ampliacao-titulo">
+		<img src="" alt="" id="ampliacao-foto">
+		<div class="ampliacao-texto">
+			<h2 id="ampliacao-titulo"></h2>
+			<p id="ampliacao-descricao"></p>
+			<div class="ampliacao-acoes">
+				<a href="contactos.html" class="botao" id="ampliacao-pedir">Pedir esta peça</a>
+				<button type="button" class="botao-fechar" id="ampliacao-fechar">Fechar</button>
+			</div>
+		</div>
+	</dialog>
+
+	<footer class="rodape">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-md-5">
+					<a class="marca mb-3" href="index.html">
+						<img src="img/emblema.png" alt="" width="44" height="40">
+						<span class="marca-nome">CRIS<span>3D</span></span>
+					</a>
+					<p class="texto-curto mb-0">Peças impressas em 3D, desenhadas à medida na Marinha Grande.</p>
+				</div>
+				<div class="col-6 col-md-3">
+					<h2>Páginas</h2>
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="catalogo.html">Catálogo</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="contactos.html">Contactos</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<h2>Siga a Cris3D</h2>
+					<ul>
+						<li><a href="https://www.instagram.com/cris3d.print/" target="_blank" rel="noopener">Instagram</a></li>
+						<li><a href="https://www.facebook.com/CRIS3DPRINT" target="_blank" rel="noopener">Facebook</a></li>
+						<li><a href="mailto:cris3d.impressoes@gmail.com">cris3d.impressoes@gmail.com</a></li>
+					</ul>
+				</div>
+			</div>
+			<p class="rodape-fim mb-0">&copy; 2026 Cris3D &ndash; Ana Marques</p>
+		</div>
 	</footer>
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/pecas.js"></script>
+	<script src="js/filtros.js"></script>
 </body>
 </html>
