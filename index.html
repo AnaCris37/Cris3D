@@ -16,8 +16,10 @@
 	<header class="cabecalho">
 		<nav class="navbar navbar-expand-lg" aria-label="Menu principal">
 			<div class="container">
-				<a class="marca" href="index.html">
-					<img src="img/emblema.png" alt="" width="44" height="40">
+				<a class="marca" href="index.html" aria-label="Cris3D, página inicial">
+					<video class="marca-logo" autoplay muted loop playsinline poster="img/emblema.png" aria-hidden="true">
+						<source src="img/logo-menu.mp4" type="video/mp4">
+					</video>
 					<span class="marca-nome">CRIS<span>3D</span></span>
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
@@ -38,29 +40,29 @@
 	</header>
 
 	<main>
-		<section class="abertura">
+		<section class="secao pt-4 pt-lg-5">
 			<div class="container">
-				<div class="row align-items-center g-4 g-lg-5">
-					<div class="col-lg-7">
-						<h1>Peças em 3D feitas à sua medida.</h1>
-						<p>Relógios, prendas com nome, enfeites de Natal e peças para o seu negócio, desenhados e impressos na Marinha Grande.</p>
-						<div class="botoes">
-							<a href="contactos.html" class="botao">Pedir informação</a>
-							<a href="catalogo.html" class="botao botao-contorno">Ver catálogo</a>
+				<div class="row g-4 align-items-center topo-inicio">
+					<div class="col-lg-8">
+						<div class="abertura">
+							<h1>Peças em 3D feitas à sua medida.</h1>
+							<p>Relógios, prendas com nome, enfeites de Natal e peças para o seu negócio, desenhados e impressos na Marinha Grande.</p>
 						</div>
 					</div>
-					<div class="col-lg-5">
-						<video class="abertura-video" autoplay muted loop playsinline poster="img/logo-impressao-poster.jpg"
-							aria-label="Animação do logótipo Cris3D: a impressora imprime uma pirâmide dourada">
-							<source src="img/logo-impressao.mp4" type="video/mp4">
-						</video>
+					<div class="col-lg-4">
+						<div class="ideia">
+							<div>
+								<p class="ideia-titulo">Tem uma ideia?</p>
+								<p>Envie uma foto ou uma descrição e respondemos com a proposta.</p>
+							</div>
+							<a href="contactos.html" class="ideia-seta" aria-label="Ir para o pedido de informação">
+								<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+									<path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<section class="secao">
-			<div class="container">
 				<div class="secao-titulo">
 					<h2>Alguns trabalhos</h2>
 					<a href="catalogo.html">Ver as 43 peças do catálogo</a>
@@ -139,15 +141,6 @@
 			</div>
 		</section>
 
-		<section class="convite">
-			<div class="container d-md-flex justify-content-between align-items-center gap-4">
-				<div class="mb-3 mb-md-0">
-					<h2>Tem uma ideia?</h2>
-					<p>Envie uma foto ou uma descrição e respondemos com a proposta.</p>
-				</div>
-				<a href="contactos.html" class="botao">Pedir informação</a>
-			</div>
-		</section>
 	</main>
 
 	<dialog class="ampliacao" id="ampliacao" aria-labelledby="ampliacao-titulo">
@@ -163,34 +156,12 @@
 	</dialog>
 
 	<footer class="rodape">
-		<div class="container">
-			<div class="row g-4">
-				<div class="col-md-5">
-					<a class="marca mb-3" href="index.html">
-						<img src="img/emblema.png" alt="" width="44" height="40">
-						<span class="marca-nome">CRIS<span>3D</span></span>
-					</a>
-					<p class="texto-curto mb-0">Peças impressas em 3D, desenhadas à medida na Marinha Grande.</p>
-				</div>
-				<div class="col-6 col-md-3">
-					<h2>Páginas</h2>
-					<ul>
-						<li><a href="index.html">Início</a></li>
-						<li><a href="catalogo.html">Catálogo</a></li>
-						<li><a href="sobre.html">Sobre</a></li>
-						<li><a href="contactos.html">Contactos</a></li>
-					</ul>
-				</div>
-				<div class="col-12 col-sm-6 col-md-4">
-					<h2>Siga a Cris3D</h2>
-					<ul>
-						<li><a href="https://www.instagram.com/cris3d.print/" target="_blank" rel="noopener">Instagram</a></li>
-						<li><a href="https://www.facebook.com/CRIS3DPRINT" target="_blank" rel="noopener">Facebook</a></li>
-						<li><a href="mailto:cris3d.impressoes@gmail.com">cris3d.impressoes@gmail.com</a></li>
-					</ul>
-				</div>
-			</div>
-			<p class="rodape-fim mb-0">&copy; 2026 Cris3D &ndash; Ana Marques</p>
+		<div class="container rodape-linha">
+			<p>&copy; 2026 Cris3D &ndash; Ana Marques &middot; Marinha Grande</p>
+			<ul>
+				<li><a href="https://www.instagram.com/cris3d.print/" target="_blank" rel="noopener">Instagram</a></li>
+				<li><a href="https://www.facebook.com/CRIS3DPRINT" target="_blank" rel="noopener">Facebook</a></li>
+			</ul>
 		</div>
 	</footer>
 

@@ -103,9 +103,11 @@ button:focus-visible,
 	text-decoration: none;
 }
 
-.marca img {
-	width: 44px;
-	height: auto;
+.marca-logo {
+	width: 52px;
+	height: 52px;
+	object-fit: contain;
+	display: block;
 }
 
 .marca-nome {
@@ -212,76 +214,82 @@ button:focus-visible,
 	font-size: 0.95rem;
 }
 
-/* ---------- Faixa de abertura (página inicial) ---------- */
+/* ---------- Abertura (página inicial) ---------- */
+
+.topo-inicio {
+	margin-bottom: 3.5rem;
+}
 
 .abertura {
-	position: relative;
-	background-color: var(--preto);
-	color: var(--prata);
-	overflow: hidden;
+	border-left: 5px solid var(--ouro);
+	padding: 0.25rem 0 0.25rem 1.25rem;
 }
 
-/* linhas finas como as camadas de uma peça impressa */
-.abertura::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-image: repeating-linear-gradient(
-		to bottom,
-		rgba(212, 175, 55, 0.09) 0,
-		rgba(212, 175, 55, 0.09) 1px,
-		transparent 1px,
-		transparent 7px
-	);
-	pointer-events: none;
-}
-
-.abertura .container {
-	position: relative;
-	padding-top: 4rem;
-	padding-bottom: 4rem;
-}
-
-.abertura h1 {
-	color: #FFFFFF;
-	margin-bottom: 1.25rem;
-	max-width: 14ch;
-}
-
-.abertura p {
-	font-size: 1.2rem;
-	max-width: 40ch;
-	color: var(--prata);
-	margin-bottom: 2rem;
-}
-
-.abertura .botoes {
+/* "Tem uma ideia?" ao lado do título, com seta para os contactos */
+.ideia {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 0.75rem;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
 }
 
-.abertura-video {
-	width: 100%;
-	max-width: 420px;
-	height: auto;
-	display: block;
-	margin: 0 auto;
-	/* o fundo do vídeo funde-se com as linhas da faixa */
-	mix-blend-mode: lighten;
-	-webkit-mask-image: radial-gradient(closest-side, #000 75%, transparent);
-	mask-image: radial-gradient(closest-side, #000 75%, transparent);
+.ideia p {
+	margin: 0;
+	color: var(--cinza);
+	max-width: 30ch;
+	text-wrap: balance;
+}
+
+.ideia .ideia-titulo {
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	font-size: 1.4rem;
+	color: var(--preto);
+	margin-bottom: 0.25rem;
+}
+
+.ideia-seta {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	background-color: var(--ouro);
+	color: var(--preto) !important;
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+	transition: background-color 0.2s;
+}
+
+.ideia-seta svg {
+	transition: transform 0.2s;
+}
+
+.ideia-seta:hover {
+	background-color: #E6C452;
+}
+
+.ideia-seta:hover svg {
+	transform: translateX(3px);
 }
 
 @media (max-width: 991.98px) {
-	.abertura .container {
-		padding-top: 2.5rem;
-		padding-bottom: 2rem;
+	.ideia {
+		justify-content: flex-start;
+		padding-left: 1.55rem;
 	}
+}
 
-	.abertura-video {
-		max-width: 280px;
-	}
+.abertura h1 {
+	font-size: clamp(1.6rem, 3vw, 2.25rem);
+	margin-bottom: 0.5rem;
+}
+
+.abertura p {
+	font-size: 1.15rem;
+	color: var(--cinza);
+	max-width: 60ch;
+	margin: 0;
 }
 
 /* ---------- Grelha de peças ---------- */
@@ -371,32 +379,6 @@ button:focus-visible,
 .video-promo {
 	background-color: var(--preto);
 	clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
-}
-
-/* ---------- Faixa final (convite) ---------- */
-
-.convite {
-	background-color: var(--ouro);
-	color: var(--preto);
-	padding: 3rem 0;
-}
-
-.convite h2 {
-	margin: 0 0 0.35rem;
-}
-
-.convite p {
-	margin: 0;
-}
-
-.convite .botao {
-	background-color: var(--preto);
-	color: var(--ouro);
-}
-
-.convite .botao:hover {
-	background-color: var(--carvao);
-	color: #FFFFFF;
 }
 
 /* ---------- Catálogo: filtros ---------- */
@@ -642,48 +624,46 @@ button:focus-visible,
 	margin-top: 1.5rem;
 }
 
-/* ---------- Rodapé ---------- */
+/* ---------- Rodapé (barra dourada) ---------- */
 
 .rodape {
-	background-color: var(--preto);
-	color: var(--prata);
-	padding: 3rem 0 1.5rem;
+	background-color: var(--ouro);
+	color: var(--preto);
+	padding: 1.4rem 0;
 	font-size: 0.95rem;
 }
 
-.rodape h2 {
-	font-size: 1rem;
-	color: var(--ouro);
-	margin-bottom: 0.75rem;
+.rodape-linha {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem 1.5rem;
+}
+
+.rodape p {
+	margin: 0;
 }
 
 .rodape ul {
 	list-style: none;
+	display: flex;
+	gap: 1.75rem;
 	padding: 0;
 	margin: 0;
 }
 
-.rodape li {
-	margin-bottom: 0.35rem;
-}
-
 .rodape a {
-	overflow-wrap: anywhere;
-	color: var(--prata);
+	font-family: var(--fonte-titulos);
+	font-weight: 700;
+	font-size: 1.15rem;
+	color: var(--preto);
 	text-decoration: none;
 }
 
 .rodape a:hover {
-	color: var(--ouro);
 	text-decoration: underline;
-}
-
-.rodape-fim {
-	border-top: 1px solid #2A2A2A;
-	margin-top: 2rem;
-	padding-top: 1.25rem;
-	font-size: 0.85rem;
-	color: #8A8A8A;
+	text-underline-offset: 4px;
 }
 
 /* ---------- Menos movimento para quem o pediu no sistema ---------- */
