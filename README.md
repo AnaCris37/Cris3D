@@ -45,7 +45,7 @@ Na Cris3D transformamos ideias em objetos reais. Cada peça é desenhada e impre
 Tens uma ideia? Conta-nos e nós damos-lhe forma!
 
 📧 [cris3d.impressoes@gmail.com](mailto:cris3d.impressoes@gmail.com)
-📝 Ou preenche o formulário na página de [contactos](https://anacris37.github.io/Cris3D/contactos.html)
+📝 Ou preenche o formulário na página de [contactos](https://cris3d.netlify.app/contactos)
 
 ---
 
