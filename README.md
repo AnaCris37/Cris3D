@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="[https://anacris37.github.io/Cris3D/"](https://cris3d.netlify.app/)>🌐 Visitar o site</a> ·
+  <a href="https://cris3d.netlify.app/">🌐 Visitar o site</a> ·
   <a href="https://www.instagram.com/cris3d.print/">📸 Instagram</a> ·
   <a href="https://www.facebook.com/CRIS3DPRINT">👍 Facebook</a>
 </p>
